@@ -18,11 +18,11 @@
         let hora = agora.getHours();
         function atualizarCorDeFundo() {
     
-          if (hora >= 6 && hora < 17) {
+          if (hora >= 8 && hora < 17) {
             // Dia
             document.body.style.backgroundColor = "#ffffff";
             document.body.style.color = "#000000";
-          } if (hora >= 17 && hora <= 23 || hora === 0) {
+          } else{
             // Noite
             document.body.style.backgroundColor = "#000000";
             document.body.style.color = "#ffffff";
