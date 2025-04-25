@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\estilo.css">
+
+    <title>Novidades</title>
+
+</head>
+
+
+
+
+<body>
+
+    <header>
+
+        <nav>
+            <img src="../imagens/logo.jpg" alt="logo" id="logo">
+            <a href="..\index.html">Página Principal</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="novidades.html">Novidades</a>
+            <a href="contato.html"> Contato</a><br>
+            <div>ZARALHO's BURGER</span>
+        </nav>
+    </header>
+
+    <script>
+        function atualizarCorDeFundo() {
+            const agora = new Date();
+            const hora = agora.getHours();
+
+            if (hora >= 6 && hora < 17) {
+                // Dia
+                document.body.style.backgroundColor = "#ffffff";
+                document.body.style.color = "#000000";
+            } else if (hora >= 17 && hora <= 23 || hora === 0) {
+                // Noite
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.color = "#ffffff";
+            }
+        }
+
+        atualizarCorDeFundo(); // roda na hora
+
+        
+    </script>
+
+    <section>
+        <article>
+            <h1 style="text-align: center;">Novidades</h1>
+
+            <h1 style="text-align: center;">Novo Estabelecimento!</h1>
+
+            <p style="text-align: center;">Um novo estabelcimento foi aberto no endereço Av. Gen. Felicíssimo Cardoso, 500 - Barra da Tijuca, Rio de
+                Janeiro - RJ</p>
+            <img src="../imagens/novo.jpg" style="width: 40%; display: block; margin: auto;">
+        </article>
+        <article>
+            <h1 style="text-align: center;">Novo hambúrguer!</h1>
+            <h1 style="text-align: center;">X-Bacon</p>
+            <img src="../imagens/xbacon.jpg" alt="xbacon" style="display: block; margin: auto;">
+            <p style="text-align: center;">Pão brioche, carne 120g, bacon, maionese, queijo e cebola caramelizada</p>
+            <br><br>
+            <br><br>
+        </article>
+    </section>
+
+</body>
+
+<footer>&copy; Zaralho Burgers. Todos os direitos reservados.<br>
+    Pagina acessada em <span id="datahora"></span>
+    <script>
+        let d = new Date();
+        document.getElementById("datahora").innerHTML = String(d)
+
+    </script>
+</footer>
+
+</html>

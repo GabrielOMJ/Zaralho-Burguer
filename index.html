@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Zaralho Burguer</title>
+    
+</head>
+
+
+
+<body>
+    <script>
+        const agora = new Date();
+        let hora = agora.getHours();
+        function atualizarCorDeFundo() {
+    
+          if (hora >= 6 && hora < 17) {
+            // Dia
+            document.body.style.backgroundColor = "#ffffff";
+            document.body.style.color = "#000000";
+          } if (hora >= 17 && hora <= 23 || hora === 0) {
+            // Noite
+            document.body.style.backgroundColor = "#000000";
+            document.body.style.color = "#ffffff";
+          }
+        }
+        
+        atualizarCorDeFundo(); // roda na hora
+        document.getElementById("demo").innerHTML = hour;
+        
+      </script>
+    <header>
+        <nav>
+            <img src="imagens/logo.jpg" id="logo">
+            <a href="index.html">Página Principal</a>
+            <a href="html/sobre.html">Sobre Nós</a>
+            <a href="html/produtos.html">Produtos</a>
+            <a href="html/novidades.html">Novidades</a>
+            <a href="html/contato.html"> Contato</a><br>
+            <div>ZARALHO's BURGER</div>
+        </nav>
+    </header>
+        
+
+
+    <section>
+        
+        <article>
+            <p id="demo"></p>
+            
+        
+            <h1>Seja bem-vindo(a), cliente! </h1>
+            <p>Preparamos esse espaço com muito carinho para que você possa explorar nosso cardápio, fazer seus pedidos com praticidade e saborear os melhores hambúrgueres artesanais da região.<br>
+
+            Fique à vontade para navegar e escolher seu hambúrguer favorito. Bom apetite!</p>
+            <img src="imagens/frente.jpg" id="frente">
+            <p>Endereço: R. Ibituruna, 108 - Maracanã, Rio de Janeiro - RJ, 20271-110</p>
+            <p>Horario de funcinamento: 18:00 - 00:00</p>
+            <p>Dias disponiveis: Segunda a Sábado</p>
+        </article>
+    </section>
+    <br><br>
+
+
+</body>
+
+<footer>&copy;Zaralho Burgers. Todos os direitos reservados.<br>
+    Pagina acessada em <span id="datahora"></span>
+    <script>
+        let d = new Date();
+        document.getElementById("datahora").innerHTML = String(d)
+
+    </script>
+    </footer>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="..\estilo.css">
+
+    <title>Contato</title>
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <nav>
+            <img src="../imagens/logo.jpg" alt="logo" id="logo">
+            <a href="..\index.html">Página Principal</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="novidades.html">Novidades</a>
+            <a href="contato.html"> Contato</a><br>
+            <div>ZARALHO's BURGER</span>
+        </nav>
+    </header>
+
+    <script>
+        function atualizarCorDeFundo() {
+            const agora = new Date();
+            const hora = agora.getHours();
+
+            if (hora >= 6 && hora < 17) {
+                // Dia
+                document.body.style.backgroundColor = "#ffffff";
+                document.body.style.color = "#000000";
+            } else if (hora >= 17 && hora <= 23 || hora === 0) {
+                // Noite
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.color = "#ffffff";
+            }
+        }
+
+        atualizarCorDeFundo(); // roda na hora
+
+        
+    </script>
+
+    <h1>Entre em contato conosco por aqui</h1>
+
+    <form action="enviar.html" method="post" autocomplete="on" align="center">
+
+        <p> <label for="nome" required>Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" pattern="[A-Za-z\s]+" required>
+
+
+
+        <p><label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Digite seu email">
+
+
+
+        <p><label for="numero">Número de celular:</label>
+            <input type="number" placeholder="Digite seu número" name="numero">
+
+        <p><label for=" mensagem" style="vertical-align: 200%;">Mensagem:</label>
+            <textarea type="text" name="mensagem" placeholder="Digite sua mensagem" pattern="[A-Za-z\s]+" required rows="6" style="width: 400px;"></textarea>
+
+
+
+        <p></p> <button onclick="action" type="submit" value="OK">
+            Enviar</button>
+    </form>
+
+
+    <h1>Redes sociais</h1>
+
+    <ul class="arrobas">
+
+        <li>
+            <p><a rel="external" target="_blank" href="https://www.instagram.com/"><img
+                        src="../imagens/icone-instagram.jpg" style="width: 25px;" alt="Icone Instagram"> /@zaralho.burguer </p>
+        </li></a>
+
+
+        <li>
+            <p><a rel="external" target="_blank" href="https://www.linkedin.com/"><img
+                        src="../imagens/icone-linkedin.jpg" style="width: 25px;" alt="Icone LinkedIn"> /Zaralho Burguer </p>
+        </li></a>
+
+
+        <li>
+            <p><a rel="external" target="_blank" href="https://www.facebook.com/"><img
+                        src="../imagens/icone-facebook.jpg" style="width: 25px;" alt="Icone Facebook"> /Zaralho Burguer </p>
+        </li></a>
+        
+        <li>
+            <p><a rel="external" target="_blank" href="zaralhoburguer@gmail.com"><img
+                        src="../imagens/icone-emailjpg.jpg" style="width: 25px;" alt="Icone Email"> /zaralhoburguer@gmail.com </p>
+        </li></a>
+    </ul>
+    <br><br>
+
+</body>
+
+<footer>&copy; Zaralho Burgers. Todos os direitos reservados.<br>
+    Pagina acessada em <span id="datahora"></span>
+    <script>
+        let d = new Date();
+        document.getElementById("datahora").innerHTML = String(d)
+
+    </script>
+</footer>
+
+</html>
