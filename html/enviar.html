@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="..\estilo.css">
 
     <title>Contato</title>
@@ -16,15 +16,19 @@
 <body>
 
     <header>
-
-        <nav>
-            <img src="../imagens/logo.jpg" alt="logo" id="logo">
-            <a href="..\index.html">Página Principal</a>
+        <nav class="topnav" id="myTopnav">
+            <div id="logo">
+                <img src="../imagens/logo.jpg">
+                <div>ZARALHO's BURGER</div>
+            </div>
+            <a href="../index.html">Página Principal</a>
             <a href="sobre.html">Sobre Nós</a>
             <a href="produtos.html">Produtos</a>
             <a href="novidades.html">Novidades</a>
-            <a href="contato.html"> Contato</a><br>
-            <div>ZARALHO's BURGER</span>
+            <a href="contato.html"> Contato</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
     <script>
@@ -36,7 +40,7 @@
                 // Dia
                 document.body.style.backgroundColor = "#ffffff";
                 document.body.style.color = "#000000";
-            } else if (hora >= 17 && hora <= 23 || hora === 0) {
+            } else{
                 // Noite
                 document.body.style.backgroundColor = "#000000";
                 document.body.style.color = "#ffffff";
@@ -54,13 +58,21 @@
                 Retornar</button></p>
         </article>
     </section>
-            <footer>&copy; Zaralho Burgers. Todos os direitos reservados.<br>
-                Pagina acessada em <span id="datahora"></span>
-                <script>
-                    let d = new Date();
-                    document.getElementById("datahora").innerHTML = String(d)
-
-                </script>
-            </footer>
-
+    <footer style="color: #ffffff;">&copy;Zaralho Burgers. Todos os direitos reservados.<br>
+        Pagina acessada em <span id="datahora"></span>
+        <script>
+            let d = new Date();
+            document.getElementById("datahora").innerHTML = String(d)
+        </script>
+    </footer>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </body>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\estilo.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Novidades</title>
 
 </head>
@@ -16,15 +16,19 @@
 <body>
 
     <header>
-
-        <nav>
-            <img src="../imagens/logo.jpg" alt="logo" id="logo">
-            <a href="..\index.html">Página Principal</a>
+        <nav class="topnav" id="myTopnav">
+            <div id="logo">
+                <img src="../imagens/logo.jpg">
+                <div>ZARALHO's BURGER</div>
+            </div>
+            <a href="../index.html">Página Principal</a>
             <a href="sobre.html">Sobre Nós</a>
             <a href="produtos.html">Produtos</a>
             <a href="novidades.html">Novidades</a>
-            <a href="contato.html"> Contato</a><br>
-            <div>ZARALHO's BURGER</span>
+            <a href="contato.html"> Contato</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
 
@@ -57,27 +61,36 @@
 
             <p style="text-align: center;">Um novo estabelcimento foi aberto no endereço Av. Gen. Felicíssimo Cardoso, 500 - Barra da Tijuca, Rio de
                 Janeiro - RJ</p>
-            <img src="../imagens/novo.jpg" style="width: 40%; display: block; margin: auto;">
+            <img src="../imagens/novo.jpg" style="width: 40%; height: 40%; display: block; margin: auto;">
         </article>
         <article>
             <h1 style="text-align: center;">Novo hambúrguer!</h1>
             <h1 style="text-align: center;">X-Bacon</p>
-            <img src="../imagens/xbacon.jpg" alt="xbacon" style="display: block; margin: auto;">
+            <img src="../imagens/xbacon.jpg" style="width: 50%; height: 50%; margin: auto; display: block;">
             <p style="text-align: center;">Pão brioche, carne 120g, bacon, maionese, queijo e cebola caramelizada</p>
             <br><br>
             <br><br>
         </article>
     </section>
-
+    <footer style="color: #ffffff;">&copy;Zaralho Burgers. Todos os direitos reservados.<br>
+        Pagina acessada em <span id="datahora"></span>
+        <script>
+            let d = new Date();
+            document.getElementById("datahora").innerHTML = String(d)
+        </script>
+    </footer>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </body>
 
-<footer>&copy; Zaralho Burgers. Todos os direitos reservados.<br>
-    Pagina acessada em <span id="datahora"></span>
-    <script>
-        let d = new Date();
-        document.getElementById("datahora").innerHTML = String(d)
 
-    </script>
-</footer>
 
 </html>
