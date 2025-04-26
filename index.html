@@ -4,38 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="..\estilo.css">
-
-    <title>Contato</title>
+    <title>Zaralho Burguer</title>
 
 </head>
 
 
 
 <body>
-
-    <header>
-        <nav class="topnav" id="myTopnav">
-            <div id="logo">
-                <img src="../imagens/logo.jpg">
-                <div>ZARALHO's BURGER</div>
-            </div>
-            <a href="../index.html">Página Principal</a>
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="novidades.html">Novidades</a>
-            <a href="contato.html"> Contato</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
-    </header>
-
     <script>
+        const agora = new Date();
+        let hora = agora.getHours();
         function atualizarCorDeFundo() {
-            const agora = new Date();
-            const hora = agora.getHours();
 
             if (hora >= 6 && hora < 17) {
                 // Dia
@@ -49,87 +30,67 @@
         }
 
         atualizarCorDeFundo(); // roda na hora
-
+        document.getElementById("demo").innerHTML = hour;
 
     </script>
-
-    <h1>Entre em contato conosco por aqui</h1>
-
-    <form action="enviar.html" method="post" autocomplete="on" align="center">
-
-        <p> <label for="nome" required>Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" pattern="[A-Za-z\s]+" required>
-
-
-
-        <p><label for="email">Email:</label>
-            <input type="email" name="email" placeholder="Digite seu email">
-
-
-
-        <p><label for="numero">Número de celular:</label>
-            <input type="number" placeholder="Digite seu número" name="numero">
-
-        <p><label for=" mensagem" style="vertical-align: 200%;">Mensagem:</label>
-            <textarea type="text" name="mensagem" placeholder="Digite sua mensagem" pattern="[A-Za-z\s]+" required
-                rows="6" style="width: 400px;"></textarea>
+    <header>
+        <nav class="topnav" id="myTopnav">
+            <div id="logo">
+                <img src="imagens/logo.jpg">
+                <div>ZARALHO's BURGER</div>
+            </div>
+            <a href="index.html">Página Principal</a>
+            <a href="html/sobre.html">Sobre Nós</a>
+            <a href="html/produtos.html">Produtos</a>
+            <a href="html/novidades.html">Novidades</a>
+            <a href="html/contato.html"> Contato</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
 
 
 
-        <p></p> <button type="submit" value="OK">
-            Enviar</button>
-    </form>
+    <section>
+
+        <article>
+            <p id="demo"></p>
 
 
-    <h1>Redes sociais</h1>
+            <h1>Seja bem-vindo(a), cliente! </h1>
+            <p>Preparamos esse espaço com muito carinho para que você possa explorar nosso cardápio, fazer seus pedidos
+                com praticidade e saborear os melhores hambúrgueres artesanais da região.<br>
 
-    <ul class="arrobas">
-
-        <li>
-            <p><a rel="external" target="_blank" href="https://www.instagram.com/"><img
-                        src="../imagens/icone-instagram.jpg" style="width: 25px;" alt="Icone Instagram">
-                    /@zaralho.burguer </p>
-        </li></a>
-
-
-        <li>
-            <p><a rel="external" target="_blank" href="https://www.linkedin.com/"><img
-                        src="../imagens/icone-linkedin.jpg" style="width: 25px;" alt="Icone LinkedIn"> /Zaralho Burguer
-            </p>
-        </li></a>
-
-
-        <li>
-            <p><a rel="external" target="_blank" href="https://www.facebook.com/"><img
-                        src="../imagens/icone-facebook.jpg" style="width: 25px;" alt="Icone Facebook"> /Zaralho Burguer
-            </p>
-        </li></a>
-
-        <li>
-            <p><a rel="external" target="_blank" href="zaralhoburguer@gmail.com"><img
-                        src="../imagens/icone-emailjpg.jpg" style="width: 25px;" alt="Icone Email">
-                    /zaralhoburguer@gmail.com </p>
-        </li></a>
-    </ul>
+                Fique à vontade para navegar e escolher seu hambúrguer favorito. Bom apetite!</p>
+            <img src="imagens/frente.jpg" id="frente">
+            <p>Endereço: R. Ibituruna, 108 - Maracanã, Rio de Janeiro - RJ, 20271-110</p>
+            <p>Horario de funcinamento: 18:00 - 00:00</p>
+            <p>Dias disponiveis: Segunda a Sábado</p>
+        </article>
+    </section>
     <br><br>
 
+    <footer style="color: #ffffff;">&copy;Zaralho Burgers. Todos os direitos reservados.<br>
+        Pagina acessada em <span id="datahora"></span>
+        <script>
+            let d = new Date();
+            document.getElementById("datahora").innerHTML = String(d)
+        </script>
+    </footer>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </body>
 
-<footer style="color: #ffffff;">&copy;Zaralho Burgers. Todos os direitos reservados.<br>
-    Pagina acessada em <span id="datahora"></span>
-    <script>
-        let d = new Date();
-        document.getElementById("datahora").innerHTML = String(d)
-    </script>
-</footer>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+
+
 </html>
