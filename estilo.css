@@ -91,7 +91,7 @@ footer {
     }
   }
   
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 1350px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
